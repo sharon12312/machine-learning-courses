@@ -30,4 +30,4 @@ fetch_20_train = fetch_20newsgroups(subset='train')
 digits_dataset = load_digits(n_class=10)
 
 plt.imshow(digits_dataset.images[1], cmap='Greys')
-plt.show()
+# plt.show()

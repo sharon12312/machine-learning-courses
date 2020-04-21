@@ -7,7 +7,6 @@ from sklearn.ensemble import RandomForestClassifier     # import random forest a
 from sklearn.linear_model import LogisticRegression     # import logistic regression algorithm
 from sklearn.linear_model import LogisticRegressionCV   # import logistic regression cross validation algorithm
 from sklearn import metrics                             # import metrics to preform performance checks
-from sklearn.preprocessing import Imputer               # sklearn.preprocessing imputes the movie-recommendations
 
 desired_width = 320
 desired_columns = 10
@@ -43,7 +42,7 @@ def plot_corr(df, size=11):
 # | skin         | ????                                                      | What is this?
 # | diabetes     | Class variable (1=True, 0=False)                          | Why is our movie-recommendations boolean (True/False)?
 
-df = pd.read_csv("./movie-recommendations/pima-movie-recommendations.csv")
+df = pd.read_csv("./data/pima-data.csv")
 
 # (rows, columns) => presents the numbers of rows and the number of columns
 print("Shape:")
@@ -129,7 +128,6 @@ print("# rows missing diab_pred: {0}".format(len(df.loc[df['diab_pred'] == 0])))
 print("# rows missing age: {0}".format(len(df.loc[df['age'] == 0])))
 
 # impute with mean all 0 readings
-# fill_0 = Imputer(missing_values=0, strategy="mean", axis=0)
 fill_0 = impute.SimpleImputer(missing_values=0, strategy="mean")
 X_train = fill_0.fit_transform(X_train)
 X_test = fill_0.fit_transform(X_test)

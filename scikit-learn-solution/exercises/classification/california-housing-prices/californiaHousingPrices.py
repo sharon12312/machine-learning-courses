@@ -21,7 +21,7 @@ X = housing_data.drop(['median_house_value', 'above_median'], axis=1)
 Y = housing_data['above_median']
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
-# using 'liblinear as a solver is good for small datasets and binary classification
+# using 'liblinear as a solver is good for small dataset and binary classification
 logistic_model = LogisticRegression(solver='liblinear').fit(x_train, y_train)
 print("Training score: ", logistic_model.score(x_train, y_train))
 

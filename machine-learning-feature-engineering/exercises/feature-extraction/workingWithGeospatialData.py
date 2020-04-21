@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import geopandas
+import descartes
 
 pd.options.display.max_rows = 10
 
@@ -18,7 +19,7 @@ print(df.head())
 gdf = geopandas.GeoDataFrame(df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))
 print(gdf.head())
 
-# world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
+# world = geopandas.read_file(geopandas.dataset.get_path('naturalearth_lowres'))
 # ax = world[world.continent == 'South America'].plot(color='white', edgecolor='black')
 # gdf.plot(ax=ax, color='red')
 # plt.show()
