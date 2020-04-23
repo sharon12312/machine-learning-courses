@@ -46,11 +46,11 @@ user_factors, item_factors = implicit.alternating_least_squares(rating_matrix, f
 # items_factors will be
 #
 #            10   |  20  |  30
-#   factor1   x   |  y   |  z
-#   factor2  ...  | ...  |  ...
+#   factor1   x   | ...  |  ...
+#   factor2   y   | ...  |  ...
 #     ...
 
-# dot return all the column which contains all the factors,
+# dot return all the columns which contains all the factors,
 # i.e. it get all the items for userId: 196
 user196 = item_factors.dot(user_factors[196])
 
