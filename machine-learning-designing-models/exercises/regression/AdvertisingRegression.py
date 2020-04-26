@@ -34,7 +34,7 @@ print(advertising_data_correlation)
 # sns.heatmap(advertising_data_correlation, annot=True)
 # plt.show()
 
-# train and test our model
+# train and machine-learning-my-models our model
 X = advertising_data['TV'].values.reshape(-1, 1)  # reshape to 2D array
 Y = advertising_data['sales'].values.reshape(-1, 1)  # reshape to 2D array
 

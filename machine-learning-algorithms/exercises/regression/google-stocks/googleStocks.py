@@ -16,9 +16,9 @@ def read_file(filename, tbond=False):
     return data
 
 
-goog_data = read_file("./movie-recommendations/goog.csv")
-nasdaq_data = read_file("./movie-recommendations/nasdaq.csv")
-tbond_data = read_file("./movie-recommendations/tbond5yr.csv", tbond=True)
+goog_data = read_file("./data/goog.csv")
+nasdaq_data = read_file("./data/nasdaq.csv")
+tbond_data = read_file("./data/tbond5yr.csv", tbond=True)
 
 reg = SGDRegressor(eta0=0.1, max_iter=100000, fit_intercept=False)
 reg.fit((nasdaq_data - tbond_data).values.reshape(-1, 1), (goog_data - tbond_data))

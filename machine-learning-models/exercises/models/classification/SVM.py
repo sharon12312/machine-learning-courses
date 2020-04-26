@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score
 
 twenty_train = fetch_20newsgroups(subset='train', shuffle=True)
-twenty_test = fetch_20newsgroups(subset='test', shuffle=True)
+twenty_test = fetch_20newsgroups(subset='machine-learning-my-models', shuffle=True)
 
 print(twenty_train.keys())
 print(twenty_train.data[0])

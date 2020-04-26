@@ -7,7 +7,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 
-auto_data = pd.read_csv('../data/imports-85.data', sep=r'\s*,\s*', engine='python')
+auto_data = pd.read_csv('../../../data/imports-85.data', sep=r'\s*,\s*', engine='python')
 print(auto_data)
 
 auto_data = auto_data.replace('?', np.nan)
@@ -113,13 +113,13 @@ print(gbr_model.score(X_train, Y_train))
 
 y_predict = gbr_model.predict(x_test)
 
-# # visualization
-# plt.figure(figsize=(15, 6))
-# plt.plot(y_predict, label='Predicted')
-# plt.plot(y_test.values, label='Actual')
-# plt.ylabel('MPG')
-# plt.legend()
-# plt.show()
+# visualization
+plt.figure(figsize=(15, 6))
+plt.plot(y_predict, label='Predicted')
+plt.plot(y_test.values, label='Actual')
+plt.ylabel('MPG')
+plt.legend()
+plt.show()
 
 r_square = gbr_model.score(x_test, y_test)
 print(r_square)

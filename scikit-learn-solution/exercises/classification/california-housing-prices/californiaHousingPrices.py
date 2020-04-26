@@ -25,7 +25,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 logistic_model = LogisticRegression(solver='liblinear').fit(x_train, y_train)
 print("Training score: ", logistic_model.score(x_train, y_train))
 
-# get the score of our test data
+# get the score of our machine-learning-my-models data
 y_pred = logistic_model.predict(x_test)
 df_pred_actual = pd.DataFrame({'predicted': y_pred, 'actual': y_test})
 print(df_pred_actual.head(10))

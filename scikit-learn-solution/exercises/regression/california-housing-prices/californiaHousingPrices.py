@@ -24,7 +24,7 @@ print(housing_data.sample(5))
 X = housing_data.drop('median_house_value', axis=1)
 Y = housing_data['median_house_value']
 
-# split the data for 80% train and 20% test
+# split the data for 80% train and 20% machine-learning-my-models
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
 # train our model

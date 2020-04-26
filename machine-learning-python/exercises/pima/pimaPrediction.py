@@ -32,7 +32,7 @@ def plot_corr(df, size=11):
 # | Feature      | Description                                               | Comments
 # |--------------|-----------------------------------------------------------|
 # | num_preg     | number of pregnancies                                     |
-# | glucose_conc | concentration a 2 hours in an oral glucose tolerance test |
+# | glucose_conc | concentration a 2 hours in an oral glucose tolerance machine-learning-my-models |
 # | diastolic_bp | Diastolic blood pressure (mm Hg)                          |
 # | thickness    | Triceps skin fold thickness (mm)                          |
 # |insulin       | 2-Hour serum insulin (mu U/ml)                            |
@@ -101,9 +101,9 @@ split_test_size = 0.30
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=split_test_size, random_state=42)
 
-# we need to insure we have the desired 70% train, 30% test split of the movie-recommendations
+# we need to insure we have the desired 70% train, 30% machine-learning-my-models split of the movie-recommendations
 print("{0:0.2f}% in training set".format((len(X_train) / len(df.index)) * 100))
-print("{0:0.2f}% in test set".format((len(X_test) / len(df.index)) * 100))
+print("{0:0.2f}% in machine-learning-my-models set".format((len(X_test) / len(df.index)) * 100))
 print("")
 
 # verifying predicted value was split correctly

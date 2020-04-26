@@ -54,7 +54,7 @@ print(features_scaled_df.describe())
 diabetes_data = pd.concat([features_scaled_df, diabetes_data['Outcome']], axis=1).reset_index(drop=True)
 diabetes_data.to_csv('data/diabetes_processed.csv', index=False)
 
-# train and test our model: LogisticRegression
+# train and machine-learning-my-models our model: LogisticRegression
 X = diabetes_data.drop('Outcome', axis=1)
 Y = diabetes_data['Outcome']
 
@@ -76,7 +76,7 @@ print('Accuracy of the model is {:.2f}%'.format(model_accuracy * 100))
 print('Precision of the model is {:.2f}%'.format(model_precision * 100))
 print('Recall of the model is {:.2f}%'.format(model_recall * 100))
 
-# train and test our model: DecisionTreeClassifier
+# train and machine-learning-my-models our model: DecisionTreeClassifier
 classifier = DecisionTreeClassifier(max_depth=4)
 classifier.fit(x_train, y_train)
 
